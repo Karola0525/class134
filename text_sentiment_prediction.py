@@ -7,14 +7,14 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 
 
-train_data = pd.read_csv("/content/PRO-1-4-C134-Codigo-referencia/static/assets/data_files/tweet_emotions.csv")    
+train_data = pd.read_csv("/content/class134/static/assets/data_files/tweet_emotions.csv")    
 training_sentences = []
 
 for i in range(len(train_data)):
     sentence = train_data.loc[i, "content"]
     training_sentences.append(sentence)
 
-model = load_model("/content/PRO-1-4-C134-Codigo-referencia/static/assets/model_files/Tweet_Emotion.h5")
+model = load_model("/content/class134/static/assets/model_files/Tweet_Emotion.h5")
 
 vocab_size = 40000
 max_length = 100
